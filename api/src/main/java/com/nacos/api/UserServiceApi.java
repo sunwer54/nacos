@@ -11,8 +11,8 @@ public interface UserServiceApi {
      * @param uname 请求参数之前必须加@RequestParam(value = "name") ,参数名不能省略
      * @param pwd 请求参数之前必须加@RequestParam(value = "pwd") ,参数名不能省略
      * 注意：@PostMapping(value = "/loginuser")中不能加上produces = "text/html;charset=utf-8"
-     *       否则服务端服务列表中的参数与消费端传入的参数不匹配，出现报错：
-     *       No converter for [class com.nacos.pojo.TUser] with preset Content-Type null
+     *      否则服务端服务列表中的参数与消费端传入的参数不匹配，出现报错：
+     *      No converter for [class com.nacos.pojo.TUser] with preset Content-Type null
      *      （没有用于[类com.nacos.pojo]的转换器。预设内容类型为空）
      * @return
      */
