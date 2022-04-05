@@ -34,4 +34,12 @@ public class TUser {
     this.pwd = pwd;
   }
 
+  @Override
+  public String toString() {
+    return "TUser{" +
+            "id=" + id +
+            ", uname='" + uname + '\'' +
+            ", pwd='" + pwd + '\'' +
+            '}';
+  }
 }

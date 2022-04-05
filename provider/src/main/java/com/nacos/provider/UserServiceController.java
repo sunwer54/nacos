@@ -14,4 +14,9 @@ public class UserServiceController implements UserServiceApi {
     public TUser loginUser(String uname, String pwd) {
         return userService.loginUser(uname, pwd);
     }
+
+    @Override
+    public TUser loginUserByAcceptObj(TUser tUser) {
+        return userService.loginUser(tUser.getUname(),tUser.getPwd());
+    }
 }
