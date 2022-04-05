@@ -1,7 +1,8 @@
+#配置数据库连接参数
 spring:
   datasource:
-    type: com.alibaba.druid.pool.DruidDataSource
-    driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/test?serverTimezone=CST&characterEncoding=utf-8
-    username: root
-    password: li545426
+    type: com.alibaba.druid.pool.DruidDataSource  #采用的连接池
+    driver-class-name: com.mysql.jdbc.Driver #驱动类
+    url: jdbc:mysql://localhost:3306/test?serverTimezone=CST&characterEncoding=utf-8 #连接的数据库url
+    username: root  #数据库用户名
+    password: li545426 #数据库登录密码

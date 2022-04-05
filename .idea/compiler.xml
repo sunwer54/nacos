@@ -7,11 +7,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="api" />
         <module name="mapper" />
-        <module name="provider" />
-        <module name="passport" />
+        <module name="api" />
         <module name="pojo" />
+        <module name="provider" />
+        <module name="provider3" />
+        <module name="provider2" />
+        <module name="passport" />
       </profile>
     </annotationProcessing>
   </component>
@@ -22,6 +24,8 @@
       <module name="passport" options="-parameters" />
       <module name="pojo" options="-parameters" />
       <module name="provider" options="-parameters" />
+      <module name="provider2" options="-parameters" />
+      <module name="provider3" options="-parameters" />
     </option>
   </component>
 </project>

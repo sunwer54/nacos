@@ -1,11 +1,14 @@
+#配置nacos服务注册中心
 spring:
   application:
-    name: provider-service
+    name: provider-service #注册的服务的名字（会暴露在nacos注册中心）
   cloud:
     nacos:
       discovery:
-        server-addr: localhost:8848
+        server-addr: localhost:8848 #nacos服务注册中心的服务器地址
+  #关联mapper层的配置文件
   profiles:
     active: mapper
+  #配置服务器端口
 server:
   port: 8080

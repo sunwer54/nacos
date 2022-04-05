@@ -17,7 +17,7 @@ public class UserServiceController implements UserServiceApi {
 
     @Override
     public TUser loginUserByAcceptObj(TUser tUser) {
-        System.out.println("provider提供服务......");
+        System.out.println("provider3提供服务------>");
         return userService.loginUser(tUser.getUname(),tUser.getPwd());
     }
 }

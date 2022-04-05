@@ -12,6 +12,8 @@
         <module>api</module>
         <module>pojo</module>
         <module>provider</module>
+        <module>provider2</module>
+        <module>provider3</module>
         <module>passport</module>
     </modules>
     <!-- Spring Boot的父项目，声明所有Spring Boot相关版本 -->

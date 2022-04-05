@@ -1,13 +1,40 @@
+#配置服务器端口
 server:
-  port: 8081
+  port: 8090
+#配置nacos服务注册中心
 spring:
   application:
-    name: passport
+    name: passport  #服务名字（会暴露在nacos服务注册中心）
   cloud:
     nacos:
       discovery:
-        server-addr: localhost:8848
+        server-addr: localhost:8848 #nacos服务注册中心的服务器地址
+  #配置视图解析器
   mvc:
     view:
-      prefix: /pages/
-      suffix: .html
+      prefix: /pages/ #前缀
+      suffix: .html #后缀
+#设置负载均衡策略。
+#provider-service 是要请求的微服务名称，即为当前服务提供服务的spring.application.name 属性值
+provider-service:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+    #NFLoadBalancerRuleClassName: com.netflix.loadbalancer.策略类名
+    #轮询策略（默认）:轮询策略表示每次都顺序取下一个 provider
+    #NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RoundRobinRule
+    #权重轮询策略:根据每个provider的响应时间分配一个权重，响应时间越长，权重越小，被选中的可能性越低。
+    #NFLoadBalancerRuleClassName: com.netflix.loadbalancer.WeightedResponseTimeRule
+    #随机策略:从 provider 列表中随机选择一个 provider
+    #NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+    #最少并发数策略:选择正在请求中的并发数最小的 provider ，除非这个 provider 在熔断中。
+    #NFLoadBalancerRuleClassName: com.netflix.loadbalancer.BestAvailableRule
+    #在“选定的负载均衡策略”基础上进行重试机制:
+    #NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RetryRule
+    #可用性敏感策略（一般在同区域内服务集群环境中使用）:过滤性能差的provider, 有2种：
+    #第一种：过滤掉在nacos 中处于一直连接失败 provider
+    #第二种：过滤掉高并发的 provider
+    #NFLoadBalancerRuleClassName: com.netflix.loadbalancer.AvailabilityFilteringRule
+    #区域敏感性策略（应用在大型的，物理隔离分布式环境中）:
+    #1.以一个区域为单位考察可用性，对于不可用的区域整个丢弃，从剩下区域中选可用的 provider
+    #2.如果这个 ip 区域内有一个或多个实例不可达或响应变慢，都会降低该 ip 区域内其他ip 被选中的权重。
+    #NFLoadBalancerRuleClassName: com.netflix.loadbalancer.ZoneAvoidanceRule
