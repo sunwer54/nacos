@@ -19,6 +19,7 @@ public class ConfigController {
     private String name;
     @Value("${person.age}")
     private String age;
+
     @RequestMapping("/testConfigCentre")
     public String testConCen(){
         return  "姓名："+name+"---年龄："+age;
