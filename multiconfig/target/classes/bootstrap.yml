@@ -1,0 +1,25 @@
+#配置文件的名称：bootstrap.yml与application.yml的意思是一样，
+#只是bootstrap.yml的加载优先级比application.yml要高一些
+
+#配置服务器端口
+server:
+  port: 8060
+#配置nacos的服务名
+spring:
+  application:
+    name: multiconfig  #在读取多个配置文件的方式下，这个名字可以随便写
+  #配置nacos服务器的地址
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+      #读取配置中心多个配置文件时的配置方式
+      config:
+        extension-configs:               #读取nacos配置中心的多个配置文件
+          - dataId: multiconfigone.yml   #写配置中心dataId的全文件名
+            group: GROUP_MULTI           #写当前配置文件的所属分组
+            refresh: true                #这个不能缺少，与Controller类上的注解@RefreshScope配合使用
+          - dataId: multiconfigtwo.yml   #写配置中心dataId的全文件名
+            group: GROUP_MULTI           #写当前配置文件的所属分组
+            refresh: true                #这个不能缺少，与Controller类上的注解@RefreshScope配合使用
+        namespace: cf62561e-1d03-49d3-a9ed-ed0d4d858ea5  #所在的命名空间码
