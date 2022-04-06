@@ -2,7 +2,6 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/api/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/config/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mapper/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/multiconfig/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/passport/src/main/java" charset="UTF-8" />
@@ -10,5 +9,6 @@
     <file url="file://$PROJECT_DIR$/provider/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/provider2/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/provider3/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/singleconfig/src/main/java" charset="UTF-8" />
   </component>
 </project>

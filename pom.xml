@@ -15,7 +15,7 @@
         <module>provider2</module>
         <module>provider3</module>
         <module>passport</module>
-        <module>config</module>
+        <module>singleconfig</module>
         <module>multiconfig</module>
     </modules>
     <!-- Spring Boot的父项目，声明所有Spring Boot相关版本 -->

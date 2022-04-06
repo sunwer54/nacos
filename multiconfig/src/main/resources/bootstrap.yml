@@ -22,4 +22,4 @@ spring:
           - dataId: multiconfigtwo.yml   #写配置中心dataId的全文件名
             group: GROUP_MULTI           #写当前配置文件的所属分组
             refresh: true                #这个不能缺少，与Controller类上的注解@RefreshScope配合使用
-        namespace: cf62561e-1d03-49d3-a9ed-ed0d4d858ea5  #所在的命名空间码
+        namespace: cf62561e-1d03-49d3-a9ed-ed0d4d858ea5  #nacos配置中心配置文件所在的命名空间Id
