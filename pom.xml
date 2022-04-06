@@ -15,6 +15,8 @@
         <module>provider2</module>
         <module>provider3</module>
         <module>passport</module>
+        <module>config</module>
+        <module>multiconfig</module>
     </modules>
     <!-- Spring Boot的父项目，声明所有Spring Boot相关版本 -->
     <parent>
@@ -41,6 +43,7 @@
         <openfeign-version>2.2.9.RELEASE</openfeign-version>
         <mybatis-springboot-version>2.1.1</mybatis-springboot-version>
         <mysql-driver-version>5.1.48</mysql-driver-version>
+        <nacos-config-version>2.2.0.RELEASE</nacos-config-version>
     </properties>
 
     <!--坐标统一管理-->
@@ -62,6 +65,12 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-web</artifactId>
                 <version>${com-alibaba-cloud-web.version}</version>
+            </dependency>
+            <!--nacos配置中心-->
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-nacos-config</artifactId>
+                <version>${nacos-config-version}</version>
             </dependency>
 
             <dependency>

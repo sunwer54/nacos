@@ -1,0 +1,17 @@
+#配置文件的名称：bootstrap.yml与application.yml的意思是一样，只bootstrap.yml的加载优先级比application.yml要高一些
+server:
+  port: 8070
+spring:
+  application:
+    name: config-study #注意服务名称要与nacos配置中心的DataId的名称前缀名称一致
+  #nacos服务器配置
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+      config:
+        file-extension: yml #nacos配置中心的DataId的名称的文件扩展名
+        group: GROUP_A
+        namespace: cf62561e-1d03-49d3-a9ed-ed0d4d858ea5 #nacos配置中心对应的命名空间ID
+  profiles:
+    active: dev #这是nacos配置中心的DataId的文件的中缀

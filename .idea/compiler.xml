@@ -14,13 +14,21 @@
         <module name="provider3" />
         <module name="provider2" />
         <module name="passport" />
+        <module name="multiconfig" />
+        <module name="config" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="config_centre" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="api" options="-parameters" />
+      <module name="config" options="-parameters" />
+      <module name="config_centre" options="-parameters" />
       <module name="mapper" options="-parameters" />
+      <module name="multiconfig" options="-parameters" />
       <module name="passport" options="-parameters" />
       <module name="pojo" options="-parameters" />
       <module name="provider" options="-parameters" />
